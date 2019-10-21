@@ -1,0 +1,19 @@
+﻿@model CMS.Entity.Software
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="/img/@Model.Image" width="500">
+    <div class="card-body" style="background-color:#dee2e6">
+        <p class="card-text">@Model.Title</p>
+        <p class="card-text">@Model.Text</p>
+    </div>
+</div>
+<div style="margin-top: 20px;">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a> |
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+</div>
